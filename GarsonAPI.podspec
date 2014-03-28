@@ -7,23 +7,21 @@
 Pod::Spec.new do |s|
   s.name             = "GarsonAPI"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GarsonAPI."
+  s.summary          = "Data layer access API to users, restaurant menus, ordering."
   s.description      = <<-DESC
                        An optional longer description of GarsonAPI
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "http://codingventures.com"
   s.license          = 'MIT'
   s.author           = { "Kerem Karatal" => "kkaratal@yahoo.com" }
   s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
+  s.social_media_url = 'https://twitter.com/keremk'
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
   s.source_files = 'Classes'
@@ -31,7 +29,11 @@ Pod::Spec.new do |s|
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.public_header_files = 'Classes/**/*.h'
+  s.frameworks = 'Foundation', 'SystemConfiguration'
+  s.dependency 'AFNetworking', '~> 2.2'
+  s.dependency 'SSKeychain', '~> 1.2'
+  s.dependency 'Facebook-iOS-SDK', '~> 3.12'
+  s.dependency 'ReactiveCocoa', '~> 2.2'
+  s.dependency 'Mantle', '~> 1.3'
 end

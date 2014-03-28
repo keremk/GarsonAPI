@@ -1,7 +1,8 @@
+platform :ios, '7.0'
+
 pod "GarsonAPI", :path => "../GarsonAPI.podspec"
+pod 'Expecta', '~> 0.2'
+pod 'OCMock', '~> 2.2'
 
-target "Demo" do
-end
+xcodeproj 'GarsonAPIDemo/GarsonAPIDemo'
 
-target "DemoTests" do
-end
