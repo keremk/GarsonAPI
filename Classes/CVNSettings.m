@@ -11,7 +11,7 @@
 @implementation CVNSettings
 
 + (NSDictionary *) loadSettings {
-  NSString *filePath = [[NSBundle bundleForClass: [CVNSettings class]] pathForResource:@"settings" ofType:@"plist"];
+  NSString *filePath = [[NSBundle bundleForClass: [CVNSettings class]] pathForResource:@"settings_local" ofType:@"plist"];
   NSData *pListData = [NSData dataWithContentsOfFile:filePath];
   NSPropertyListFormat format;
   NSString *error;

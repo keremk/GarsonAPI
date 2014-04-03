@@ -32,7 +32,7 @@ static NSString * const kItems = @"items";
     NSString *imageURL = nil;
     if (range.location == NSNotFound) {
       CVNSession *session = [CVNSession sharedInstance];
-      imageURL = [NSString stringWithFormat:@"%@%@", [session imageBaseURL], str];
+      imageURL = [NSString stringWithFormat:@"%@%@@2x.jpg", [session imageBaseURL], str];
     } else {
       imageURL = str;
     }
