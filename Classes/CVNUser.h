@@ -6,9 +6,8 @@
 //
 //
 
-#import "Mantle.h"
-
-
+#import <Mantle/Mantle.h>
+#import "CVNOrder.h"
 
 @interface CVNUser : MTLModel<MTLJSONSerializing>
 
@@ -30,5 +29,6 @@
 @property(nonatomic, copy) NSString *country;
 @property(nonatomic, copy) NSString *locale;
 
+@property(nonatomic, strong) CVNOrder *currentOrder;
 @end
 
