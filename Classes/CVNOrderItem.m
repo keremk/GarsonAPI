@@ -15,6 +15,7 @@ static NSString * const kDescription = @"description";
 static NSString * const kImage = @"image";
 static NSString * const kPrice = @"price";
 static NSString * const kItemCount = @"item_count";
+static NSString * const kOrderType = @"order_type";
 
 @implementation CVNOrderItem
 
@@ -41,6 +42,14 @@ static NSString * const kItemCount = @"item_count";
     return [imageURL absoluteString];
   }];
 }
+
++ (NSValueTransformer *) orderTypeJSONTransformer {
+  return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:@{
+                                                                         @"food": @(CVNOrderTypeFoodOrder),
+                                                                         @"bar": @(CVNOrderTypeBarOrder)
+                                                                         }];
+}
+
 
 - (NSString *) formattedItemCount {
   NSString *formattedItemCount;
