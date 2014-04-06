@@ -22,6 +22,7 @@
 
 - (NSArray *) orderItems;
 - (void) addMenuItem:(CVNMenuItem *)menuItem forItemCount:(NSInteger) itemCount;
+- (void) removeItemByName:(NSString *) itemName;
 - (void) removeMenuItem:(CVNMenuItem *)menuItem;
 - (CVNOrderItem *) orderItemFromMenuItem:(CVNMenuItem *) menuItem;
 - (NSInteger) itemCountForMenuItem:(CVNMenuItem *) menuItem;

@@ -45,9 +45,9 @@ static NSString * const kItemCount = @"item_count";
 - (NSString *) formattedItemCount {
   NSString *formattedItemCount;
   if (self.itemCount > 1) {
-    formattedItemCount = [NSString stringWithFormat:@"%lu items", self.itemCount];
+    formattedItemCount = [NSString stringWithFormat:@"%lu items", (unsigned long)self.itemCount];
   } else {
-    formattedItemCount = [NSString stringWithFormat:@"%lu item", self.itemCount];
+    formattedItemCount = [NSString stringWithFormat:@"%lu item", (unsigned long)self.itemCount];
   }
   return formattedItemCount;
 }

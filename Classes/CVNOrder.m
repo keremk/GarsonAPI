@@ -72,6 +72,10 @@
   }
 }
 
+- (void) removeItemByName:(NSString *) itemName {
+  [self.orderDictionary removeObjectForKey:itemName];
+}
+
 - (void) removeMenuItem:(CVNMenuItem *)menuItem {
   [self.orderDictionary removeObjectForKey:menuItem.name];
 }
